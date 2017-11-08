@@ -1,0 +1,17 @@
+
+<div class='container login'>
+  <div class="row">
+    <div class="col">
+      <h1>{{title}}</h1>
+      <ul class='move-left'>
+        {{#each results}}
+          <form action="/restaurants/{{id}}" method="GET">
+            <li>{{name}}</li>
+            <button id='restaurant' type='submit'>Check out this restaurant</button>
+          </form>
+        {{/each}}
+      </ul>
+      <button><a href="/home">Home</button>
+    </div>
+  </div>
+</div>

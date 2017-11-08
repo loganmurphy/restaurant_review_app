@@ -1,0 +1,17 @@
+<h1>{{title}}{{username}}</h1>
+
+<div class="container login">
+  <div class="row">
+    <div class="col">
+      <h2>Find a Restaurant</h2>
+      <form action="/search?search" method="GET">
+        <!-- <label>todo</label> -->
+        <input type="text" required name="search" placeholder="enter a restaurant name">
+        <br><br>
+        <button type="submit">Search</button>
+      </form>
+      <br>
+      <button><a href="/restaurant/new">Add a New Restaurant</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class='login' class="container">
+  <!-- <h1>Restaurant Reviewer 5000!</h1> -->
+  <div class="row align-items-center">
+    <div class="form col-12">
+      <h1>Login</h1>
+      <form action="/login/user" method="POST">
+        <input class='name input' required name="username" placeholder="user name">
+        <br>
+        <input required name="password" type="password" placeholder="password">
+        <br>
+        <input class='submit' type="submit" value="Login">
+      </form>
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="form col-12">
+      <h2>Register</h2>
+      <form action="/login/new-user" method="POST">
+        <input class='name' required name="name" placeholder="name">
+        <br>
+        <input required name="email" placeholder="email">
+        <br>
+        <input required name="username" placeholder="user name">
+        <br>
+        <input required name="password" type="password" placeholder="password">
+        <br>
+        <input class='submit' type="submit" value="new-user">
+      </form>
+    </div>
+  </div>
+</div>

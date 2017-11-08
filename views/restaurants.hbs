@@ -1,0 +1,60 @@
+<!-- Create a page for each restaurant in the database. The URL will be /restaurant/:id where the ID parameter will be the primary key of a restaurant. On the restaurant page, display:
+
+Restaurant name
+Address
+Restaurant category
+Write a database query for retrieving the row for the restaurant based on the ID from the route parameter.
+Create an .hbs file, say restaurant.hbs and render the file, passing to it the fetched restaurant data -->
+
+<div class='container'>
+  <div class='menu'>
+    <div class='row'>
+      <div class='col-6 menu-items1'>
+        <ul class='restaurant_info'>
+          <li>
+            Name: &nbsp;{{restaurant.name}}
+          </li>
+          <li>
+            Address: &nbsp;{{restaurant.address}}
+          </li>
+          <li>
+            Category: &nbsp;{{restaurant.category}}
+          </li>
+          <br>
+          <div class='reviews'>
+            {{# each reviews}}
+              <li>Reviewer: &nbsp;{{reviewer.name}}</li>
+              <li>Title: &nbsp;{{title}}</li>
+              <li>Review: &nbsp;{{review}}</li>
+              <br>
+            {{/each}}
+          </div>
+        </ul>
+      </div>
+      <div class='col-6 menu-items2'>
+        <form class="add_comment" action="/restaurants/{{restaurant.id}}/review" method="POST">
+          <h2 class='review-titles'>Leave a Review</h2>
+          <input class='review-input' type="text" name="title" placeholder="Add your title">
+          <br><br>
+            <div class="stars">
+              <input type="radio" name="star" class="star-1" id="star-1" value="1"/>
+              <label class="star-1" for="star-1">1</label>
+              <input type="radio" name="star" class="star-2" id="star-2" value="2"/>
+              <label class="star-2" for="star-2">2</label>
+              <input type="radio" name="star" class="star-3" id="star-3" value="3"/>
+              <label class="star-3" for="star-3">3</label>
+              <input type="radio" name="star" class="star-4" id="star-4" value='4'/>
+              <label class="star-4" for="star-4">4</label>
+              <input type="radio" name="star" class="star-5" id="star-5" value='5'/>
+              <label class="star-5" for="star-5">5</label>
+              <span></span>
+            </div>
+          <br>
+          <textarea type="text" name="review" placeholder="Add your review here"></textarea>
+          <br><br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
