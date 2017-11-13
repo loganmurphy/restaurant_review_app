@@ -15,6 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       karma: {
+        allowNull: true,
         type: Sequelize.INTEGER
       },
       createdAt: {
