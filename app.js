@@ -20,7 +20,7 @@ app.use(session({
   secret: process.env.SECRET_KEY || 'dev',
   resave: true,
   saveUninitialized: false,
-  cookie: {maxAge: 60000}
+  cookie: {maxAge: 144000}
 }));
 app.set('view engine', 'hbs');
 
