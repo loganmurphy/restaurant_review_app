@@ -1,0 +1,12 @@
+INSERT INTO reviewer (name, email, karma) VALUES ('Steve-O', 'the_stever@gmail.com', 5);
+INSERT INTO reviewer (name, email, karma) VALUES ('Michelangelo', 'cowabunga@gmail.com', 7);
+INSERT INTO reviewer (name, email, karma) VALUES ('Raphael', 'deadlysai@gmail.com', 1);
+INSERT INTO reviewer (name, email, karma) VALUES ('Donatello', 'shell_shocked@gmail.com', 6);
+INSERT INTO reviewer (name, email, karma) VALUES ('Leonardo', 'the_leader@gmail.com', 3);
+INSERT INTO reviewer (name, email, karma) VALUES ('BigAl', 'soTall@gmail.com', 2);
+INSERT INTO reviewer (name, email, karma) VALUES ('Rocky', 'southpaw@gmail.com', 3);
+INSERT INTO reviewer (name, email, karma) VALUES ('Heffer', 'is_wolf@gmail.com', 5);
+INSERT INTO reviewer (name, email, karma) VALUES ('Logan', 'Wolverine@gmail.com', 6);
+INSERT INTO reviewer (name, email, karma) VALUES ('Ruby', 'cute_chic@gmail.com', 7);
+INSERT INTO reviewer (name, email, karma) VALUES ('Poppie', 'woof@gmail.com', 7);
+INSERT INTO reviewer (name, email, karma) VALUES ('Punkie', 'meow@gmail.com', 7);
