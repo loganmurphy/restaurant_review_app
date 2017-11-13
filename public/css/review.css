@@ -121,12 +121,13 @@ a:hover {
   margin-bottom: -100rem;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1199px) {
+
+@media screen and (min-width: 32px) and (max-width: 414px) {
   .add_comment {
     margin-left: 5rem;
   }
   .restaurant_info{
-    margin-left: 8rem;
+    margin-left: 13rem;
   }
   .menu-items1, .menu-items2 {
     margin: 8rem auto 0 auto;
@@ -284,6 +285,12 @@ a:hover {
   }
   .restaurant_info{
     margin-left: -.25rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .menu-items1, .menu-items2 {
+    margin: 11rem auto 0 auto;
   }
 }
 
