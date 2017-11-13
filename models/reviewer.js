@@ -4,8 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     karma: DataTypes.INTEGER,
-    username: DataTypes.STRING,
-    password: DataTypes.STRING(1234)
+    username: DataTypes.TEXT,
+    password: DataTypes.TEXT
   }, {
     classMethods: {
       associate: function(models) {
