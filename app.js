@@ -34,7 +34,8 @@ app.set('view engine', 'hbs');
 // // returns true
 
 app.get('/', function(request, response){
-  response.render('login.hbs');
+  var context = {title: 'login'}
+  response.render('login.hbs', context);
 });
 
 app.post('/login/user', function(request, response){
@@ -66,7 +67,10 @@ app.post('/login/new-user', function(request, response){
 });
 
 app.get('/home', function(request, response){
-  response.render('index.hbs');
+  let username = request.session.user.username;
+  console.log(username)
+  var context = {title: 'home ', username: username};
+  response.render('index.hbs', context);
 });
 
 app.get('/search', function(request, response){
@@ -91,7 +95,7 @@ app.get('/restaurants/:id', function(request, response, next){
     return restaurant.get_reviews();
   })
   .then(function (reviews) {
-    let context = {restaurant: restaurant, reviews: reviews};
+    let context = {restaurant: restaurant, reviews: reviews, title: 'restaurant'};
     response.render('restaurants.hbs', context);
   })
   .catch(next);
@@ -110,7 +114,8 @@ app.post('/restaurants/:id/review', function(request, response){
 });
 
 app.get('/restaurant/new', function(request, response){
-  response.render('new.hbs');
+  var context = {title: 'new restaurant'}
+  response.render('new.hbs', context );
 });
 
 app.post('/restaurant/new', function(request, response){
@@ -123,6 +128,7 @@ app.post('/restaurant/new', function(request, response){
     });
 });
 
-app.listen(8000, function(){
-  console.log('Your app is up on port 8000.');
+var PORT = process.env.PORT || 8000;
+app.listen(PORT, function () {
+  console.log('Your app is up on port ' + PORT);
 });

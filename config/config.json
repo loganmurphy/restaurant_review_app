@@ -8,6 +8,11 @@
   },
 
   "production": {
-    "use_env_variable": "DATABASE_URL"
+    "use_env_variable": "DATABASE_URL",
+    "username": "jmyalycilghpcw",
+    "port": 5432,
+    "database": "d3ii2she82qlqm",
+    "host": "ec2-23-23-159-84.compute-1.amazonaws.com",
+    "dialect": "postgres"
   }
 }

@@ -48,6 +48,12 @@ ul li {
   list-style: none;
 }
 
+.white{
+  color: #524039;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .container {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -236,6 +242,48 @@ a:hover {
   }
   .restaurant_info{
     margin-left: 8rem;
+  }
+}
+
+@media screen and (min-width: 1365px) and (max-width: 1366px) and (min-height: 1023px) and (max-height: 1024px) {
+  .menu-items1, .menu-items2 {
+    margin: 30vh auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1024px) and (min-height: 1365px) and (max-height: 1366px) {
+  .menu-items1, .menu-items2 {
+    margin: 35vh auto 0 auto;
+  }
+  .add_comment {
+    margin-left: 4rem;
+  }
+  .restaurant_info{
+    margin-left: 8rem;
+  }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1024px) and (min-height: 767px) and (max-height: 768px) {
+  .menu-items1, .menu-items2 {
+    margin: 25vh auto 0 auto;
+  }
+  .add_comment {
+    margin-left: 4rem;
+  }
+  .restaurant_info{
+    margin-left: 8rem;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 768px) and (min-height: 1023px) and (max-height: 1024px) {
+  .menu-items1, .menu-items2 {
+    margin: 30vh auto 0 auto;
+  }
+  .add_comment {
+    margin-left: 3rem;
+  }
+  .restaurant_info{
+    margin-left: -.25rem;
   }
 }
 
