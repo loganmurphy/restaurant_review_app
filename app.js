@@ -48,7 +48,7 @@ app.post('/login/user', function(request, response){
         request.session.user = results;
       response.redirect('/home')
     } else {
-      response.redirect('/login')
+      response.redirect('/')
     }
   });
 });
@@ -62,7 +62,7 @@ app.post('/login/new-user', function(request, response){
   // console.log("the hash", password)
   db.reviewer.create({name: name, email: email, username: username, password: password})
     .then(function(results){
-      response.redirect('/login');
+      response.redirect('/');
     })
 });
 
