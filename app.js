@@ -128,7 +128,9 @@ app.post('/restaurant/new', function(request, response){
     });
 });
 
-var PORT = process.env.PORT || 8000;
-app.listen(PORT, function () {
-  console.log('Your app is up on port ' + PORT);
+db.sequelize.sync().then(function() {
+  var PORT = process.env.PORT || 8000;
+  app.listen(PORT, function () {
+    console.log('Your app is up on port ' + PORT);
+  });
 });
